@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Leni M. Porumau</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #263445;
+        }
+
+        /* NAVIGASI */
+        header {
+            background: #142d4e;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #63c5da;
+        }
+
+        /* BERANDA */
+        .hero {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            background: linear-gradient(120deg, #142d4e, #286a8e);
+            color: white;
+            gap: 30px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            line-height: 1.8;
+            max-width: 550px;
+        }
+
+        /* FOTO PROFIL */
+        .hero img {
+            width: 250px;
+            height: 320px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #63c5da;
+            color: #142d4e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* BAGIAN UMUM */
+        section {
+            padding: 65px 10%;
+        }
+
+        .judul {
+            text-align: center;
+            color: #142d4e;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            text-align: center;
+            line-height: 1.9;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* PENDIDIKAN DAN PROYEK */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #286a8e;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #286a8e;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        /* KEAHLIAN */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill p {
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            height: 12px;
+            background: #dce5ef;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .isi {
+            height: 100%;
+            background: #286a8e;
+            border-radius: 10px;
+        }
+
+        /* KONTAK */
+        .contact {
+            text-align: center;
+            background: #e7f0f7;
+            line-height: 2.2;
+        }
+
+        .contact a {
+            color: #286a8e;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #142d4e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero img {
+                width: 200px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGASI -->
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#about">Profil</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#skill">Keahlian</a>
+            <a href="#project">Proyek</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- BERANDA -->
+    <section class="hero" id="home">
+
+        <div>
+            <p>HALO, SELAMAT DATANG DI PORTOFOLIO SAYA</p>
+
+            <h1>LENI M. PORUMAU</h1>
+
+            <h3>Mahasiswa | Pembelajar | Kreatif</h3>
+
+            <p>
+                Selamat datang di website portofolio pribadi saya.
+                Saya merupakan mahasiswa yang memiliki semangat
+                tinggi dalam belajar, mengembangkan kreativitas,
+                serta meningkatkan kemampuan diri dalam bidang
+                pendidikan matematika dan teknologi.
+            </p>
+
+            <a href="#about" class="btn">Kenali Saya</a>
+        </div>
+
+        <!-- FOTO PROFIL ASLI -->
+        <img src="foto saya.jpeg" alt="Foto Profil Leni M. Porumau">
+
+    </section>
+
+    <!-- PROFIL -->
+    <section id="about">
+
+        <h2 class="judul">Tentang Saya</h2>
+
+        <div class="about">
+            <p>
+                Halo! Perkenalkan, nama saya Leni M. Porumau.
+                Saya merupakan seorang mahasiswa yang memiliki
+                semangat tinggi dalam belajar dan mengembangkan
+                kemampuan diri.
+
+                Saya memiliki ketertarikan dalam bidang pendidikan,
+                khususnya matematika dan teknologi. Saya senang
+                mempelajari hal-hal baru, mengembangkan kreativitas,
+                serta memperoleh pengalaman baru.
+
+                Saya adalah pribadi yang bertanggung jawab,
+                disiplin, dan mampu bekerja sama dalam tim.
+                Saya percaya bahwa setiap pengalaman merupakan
+                kesempatan untuk menjadi lebih baik.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section id="pendidikan">
+
+        <h2 class="judul">Riwayat Pendidikan</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Sekolah Dasar</h3>
+                <p>Nama Sekolah: SD Negeri Dedern</p>
+                <p>Tahun: 2012</p>
+            </div>
+
+            <div class="card">
+                <h3>SMP</h3>
+                <p>Nama Sekolah: SMP Negeri 5 Pulau-Pulau Terselatan</p>
+                <p>Tahun: 2014</p>
+            </div>
+
+            <div class="card">
+                <h3>SMA</h3>
+                <p>Nama Sekolah: SMA Negeri 12 Maluku Barat Daya</p>
+                <p>Tahun: 2023</p>
+            </div>
+
+            <div class="card">
+                <h3>Perguruan Tinggi</h3>
+                <p>Program Studi: Pendidikan Matematika</p>
+                <p>Universitas: Universitas Pattimura Maluku Barat Daya</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="skill">
+
+        <h2 class="judul">Keahlian Saya</h2>
+
+        <div class="skill">
+            <p>Microsoft Word</p>
+            <div class="bar">
+                <div class="isi" style="width:80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>HTML dan CSS</p>
+            <div class="bar">
+                <div class="isi" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Kerja Sama Tim</p>
+            <div class="bar">
+                <div class="isi" style="width:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Komunikasi</p>
+            <div class="bar">
+                <div class="isi" style="width:75%"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PROYEK -->
+    <section id="project">
+
+        <h2 class="judul">Proyek dan Karya</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Ludo Matematika</h3>
+                <p>
+                    Pembuatan media pembelajaran matematika
+                    menggunakan permainan Ludo untuk membantu
+                    proses pembelajaran.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Website Pribadi</h3>
+                <p>
+                    Membuat website sederhana menggunakan
+                    HTML dan CSS sebagai media informasi
+                    dan pengenalan diri.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Tugas Perkuliahan</h3>
+                <p>
+                    Mengembangkan pengetahuan melalui
+                    berbagai tugas, presentasi, dan proyek
+                    selama perkuliahan.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact" id="contact">
+
+        <h2 class="judul">Hubungi Saya</h2>
+
+        <p>
+            Email:
+            <a href="mailto:ALAMAT_EMAIL_KAMU">
+                ALAMAT_EMAIL_KAMU
+            </a>
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://instagram.com/" target="_blank">
+                @Eny lina porumau
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/leniporumau" target="_blank">
+                github.com/leniporumau
+            </a>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 My Portfolio - Leni M. Porumau.</p>
+        <p>Dibuat dengan HTML dan CSS.</p>
+    </footer>
+
+</body>
+</html>
